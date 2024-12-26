@@ -1,0 +1,250 @@
+style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            background-color: #181818;
+            color: #fff;
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for the lesson */
+        .lesson-container {
+            width: 100%;
+            max-width: 1200px;
+            background: #2d2d2d;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 100px rgba(0, 0, 0, 0.6);
+            overflow: auto;
+            position: relative;
+            animation: bounceIn 1s ease-out;
+            max-height: 90vh;
+        }
+
+        .close-btn {
+            text-align: right;
+        }
+
+        .close-btn a{
+            font-size: 2rem;
+            text-align: right;
+            color: yellow;
+            text-decoration: none;
+
+        }
+
+        /* Title */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #00c9ff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        /* Step Sections */
+        .step {
+            opacity: 0;
+            display: none;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .step.active {
+            opacity: 1;
+            display: block;
+            transform: translateY(0);
+        }
+
+        .step-title {
+            font-size: 2rem;
+            color: #ff6d00;
+            margin-bottom: 15px;
+            font-weight: 600;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .step-content {
+            font-size: 1.2rem;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        /* Highlighting important text */
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* Buttons and Actions */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #00c9ff;
+            color: #fff;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 200, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .button-container button:hover {
+            transform: translateY(-5px);
+            background-color: #0099cc;
+        }
+
+        .button-container button:active {
+            transform: translateY(2px);
+        }
+
+        /* Code editor style */
+        .code-editor-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .output {
+            margin-top: 30px;
+            background-color: #1f1f1f;
+            padding: 25px;
+            border-radius: 12px;
+            color: #A8A8A8;
+            font-family: "Courier New", Courier, monospace;
+            white-space: pre-wrap;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Code breakdown container */
+        .code-breakdown {
+            text-align: left;
+            margin-top: 20px;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .code-breakdown div {
+            margin-bottom: 10px;
+        }
+
+        .code-breakdown strong {
+            color: #ffcc00; /* Highlight the keywords */
+            font-weight: bold;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .lesson-container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .step-title {
+                font-size: 1.8rem;
+            }
+
+            .step-content {
+                font-size: 1rem;
+            }
+
+            .button-container button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ensure left alignment for the CodeMirror textarea */
+        textarea {
+            text-align: left; /* Ensure the text is left-aligned */
+            font-family: "Courier New", Courier, monospace; /* Monospace font for code */
+            font-size: 1rem; /* Font size */
+            line-height: 1.5; /* Line height for readability */
+        }
+
+        /* Adjustments for CodeMirror editor */
+        .CodeMirror {
+            font-family: "Courier New", Courier, monospace; /* Ensure monospace font for code */
+            font-size: 1rem; /* Match font size of the textarea */
+            line-height: 1.5; /* Line height for readability */
+            text-align: left; /* Align code to the left */
+            tab-size: 2; /* Set tab size to 2 for better indentation */
+            direction: ltr; /* Ensure left-to-right text direction */
+        }
+
+    </style>
