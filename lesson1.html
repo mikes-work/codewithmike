@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Java Programming - Basics Step-by-Step">
+    <meta name="keywords" content="Java, Programming, Lesson, Interactive">
+    <title>Learn Java: Basic Syntax</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="save.css">
+</head>
+
+<body>
+
+    <div class="lesson-container">
+        <!-- Close Button (X) -->
+        <div class="close-btn" onclick="closePage()">
+            <a href="java-course.html" class="btn">X</a>
+        </div>
+        <h1>Learn Java: Step-by-Step Basics</h1>
+
+        <!-- Step 1: Introduction to Java -->
+        <div class="step active" id="step-1">
+            <div class="step-title">What is Java?</div>
+            <div class="step-content">
+                Java is a <span class="highlight">programming language</span> used to create software applications. It is platform-independent, meaning you can run a Java program on any device or system.
+            </div>
+            <div class="button-container">
+                <button id="next-1">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Understanding Syntax -->
+        <div class="step" id="step-2">
+            <div class="step-title">What is Syntax?</div>
+            <div class="step-content">
+                Syntax refers to the rules of writing code. Just like grammar in a language, if you don’t follow syntax, the computer won’t understand your code.
+            </div>
+            <div class="button-container">
+                <button id="next-2">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Variables and Data Types -->
+        <div class="step" id="step-3">
+            <div class="step-title">What is a Variable?</div>
+            <div class="step-content">
+                A <span class="highlight">variable</span> is like a box where we store data. Imagine you have a box, and inside that box, you can put a label that says what type of data it holds.
+            </div>
+
+            <div class="step-title">Why Do We Need Variables?</div>
+            <div class="step-content">
+                Variables are necessary because they allow us to store information that our program can use later.
+            </div>
+
+            <div class="button-container">
+                <button id="next-3">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Data Types and Declaration -->
+        <div class="step" id="step-4">
+            <div class="step-title">Understanding Data Types</div>
+            <div class="step-content">
+                Each variable must have a <span class="highlight">data type</span> that tells the program what kind of data it will store. For example:
+                <pre><code>int age = 10;</code></pre>
+                Here, `int` is the data type, which means this variable will hold an integer number.
+            </div>
+            <div class="button-container">
+                <button id="next-4">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Writing Your First Program -->
+        <div class="step" id="step-5">
+            <div class="step-title">Your First Java Program</div>
+            <div class="step-content">
+                Let’s write a simple Java program to print "Hello, World!" on the screen. In Java, this is how you start:
+            </div>
+
+            <div class="step-title">Understanding the Code</div>
+                <div class="step-content">
+                    Let’s break it down:
+                    <div class="code-breakdown">
+                        <div><strong>public</strong>: An access modifier that means this class is accessible from anywhere.</div>
+                        <div><strong>class</strong>: Defines a new class in Java.</div>
+                        <div><strong>static</strong>: Means the method can be called without creating an instance of the class.</div>
+                        <div><strong>main</strong>: This is the entry point for the Java program, where execution begins.</div>
+                        <div><strong>String[] args</strong>: A parameter that allows command-line arguments to be passed to the program.</div>
+                    </div>
+                </div>
+
+            <div class="code-editor-container">
+                <textarea id="editor">   public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+     }
+   }</textarea>
+            </div>
+            <div class="button-container">
+                <button id="runCode">Run Code</button>
+            </div>
+            <div class="output" id="output">
+                <p><strong>Output:</strong> <span id="output"></span></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/java/java.min.js"></script>
+    <script src="lessons-scripts.js"></script>
+
+</body>
+</html>
