@@ -1,0 +1,278 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #121212;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: #121212;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.sticky {
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #e1e1e1;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: #00aaff;
+    transform: translateY(-2px);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #00aaff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1);
+}
+
+.logo {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Lesson Section */
+#lesson-section {
+    padding: 100px 20px 40px; /* Adding more space on top */
+    background-color: #121212;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Headers */
+h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #00aaff;
+    padding-bottom: 10px;
+}
+
+/* Lesson Intro Section */
+#lesson-intro {
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#lesson-intro p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Code Breakdown Section */
+#code-breakdown {
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#code-breakdown pre {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f4f4f4;
+    font-family: Consolas, monospace;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Interactive Code Section */
+#interactive-code {
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+    width: 100%;
+    font-family: Consolas, monospace;
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 12px;
+    background-color: #2c2c2c;
+    color: #f4f4f4;
+    resize: none;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #00aaff;
+}
+
+button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Output Section */
+#output {
+    background-color: #2c2c2c;
+    color: #28a745;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin-top: 20px;
+    word-wrap: break-word;
+}
+
+/* Learning Outcome Section */
+#learning-outcome {
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#learning-outcome ul {
+    padding-left: 1.5rem;
+}
+
+#learning-outcome li {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* Quiz Section */
+#interactive-quiz {
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#quiz-form {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+#quiz-form input {
+    margin-right: 10px;
+}
+
+#quiz-result {
+    font-size: 1.4rem;
+    color: #28a745;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 30px 20px;
+    text-align: center;
+    color: #888;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1.2rem 1.5rem;
+    }
+
+    #lesson-section {
+        padding: 60px 20px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
